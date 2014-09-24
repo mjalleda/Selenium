@@ -408,8 +408,7 @@ In above example,
 
 If you close webpage two and it will not automatically change the FOCUS to webpage one. It will not change the focus. You have to tell the webdriver to change the focus to page1. 
 
-**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.   [A3_Switchto_Frames_HandlePopUpsORAlters.java]()  
-[A3_SwitchTo_Windows.java](Selenium_Programs/A3_SwitchTo_Windows.java)  
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.   [A3_Switchto_Frames_HandlePopUpsORAlters.java](Selenium_Programs/A3_Switchto_Frames_HandlePopUpsORAlters.java)  [A3_SwitchTo_Windows.java](Selenium_Programs/A3_SwitchTo_Windows.java)  
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 **8: How to work with different browsers.**  
@@ -455,6 +454,7 @@ WebDriver Obj1 = new SafariDriver();
 
 **Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.   [A3_Switchto_Frames_HandlePopUpsORAlters.java](Selenium_Programs/A3_Switchto_Frames_HandlePopUpsORAlters.java)  
 [A3_SwitchTo_Windows.java](Selenium_Programs/A3_SwitchTo_Windows.java) 
+
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 **9: Wait/Timeout settings**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
@@ -518,7 +518,7 @@ Implicit Wait: During Implicit wait if the Web Driver cannot find it immediately
 Explicit Wait: There can be instance when a particular element takes more than a minute to load. In that case you definitely not like to set a huge time to Implicit wait, as if you do this your browser will going to wait for the same time for every element.  
 To avoid that situation you can simply put a separate time on the required element only. By following this your browser implicit wait time would be short for every element and it would be large for specific element.
 
-**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [A4_manage_Timeouts_ImplicitWait_ExplicitWait_PageTimeOutLoad.java](A4_manage_Timeouts_ImplicitWait_ExplicitWait_PageTimeOutLoad.java)
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [A4_manage_Timeouts_ImplicitWait_ExplicitWait_PageTimeOutLoad.java](Selenium_Programs/A4_manage_Timeouts_ImplicitWait_ExplicitWait_PageTimeOutLoad.java)
 
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
@@ -532,7 +532,8 @@ To avoid that situation you can simply put a separate time on the required eleme
 File src = ((TakesScreenshot)Obj1).getScreenshotAs(OutputType.FILE);  
 FileUtils.copyFile(src, new File("/Users/appledev/Desktop/Screenshot1.png"));
 
-**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.   [A5_ScreenShots.java](A5_ScreenShots.java)
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.   [A5_ScreenShots.java](Selenium_Programs/A5_ScreenShots.java)
+
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **11: VERIFICATIONS/RETRIVALS:**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
@@ -594,9 +595,10 @@ For ex:
 3: Playing/paused Audio file
 
 **Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution. 
-[A6_Verification_CompoundElements.java](A6_Verification_CompoundElements.java)  
-[A6_Verifications.java](A6_Verifications.java)  
-[A6_Verifications_Table.java](A6_Verifications_Table.java)
+[A6_Verification_CompoundElements.java](Selenium_Programs/A6_Verification_CompoundElements.java)  
+[A6_Verifications.java](Selenium_Programs/A6_Verifications.java)  
+[A6_Verifications_Table.java](Selenium_Programs/A6_Verifications_Table.java)
+
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **12: ROBOT CLASS**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
@@ -609,7 +611,8 @@ In cases like above, you can use Robot class. It enters all keys which are avail
 And Mouse right, left and middle(Scroll bar) clicks.
 
 **Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  
-[A7_RobotClass.java](A7_RobotClass.java)
+[A7_RobotClass.java](Selenium_Programs/A7_RobotClass.java)
+
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **13: JAVA SCRIPT EXECUTOR CLASS**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
@@ -652,14 +655,15 @@ JavascriptExecutor js=(JavascriptExecutor) driver;
 String domain_name=(String) js.executeScript("return document.domain");
 
 **Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution. 
-[A8_JavaScriptExecutor.java](A8_JavaScriptExecutor.java)
+[A8_JavaScriptExecutor.java](Selenium_Programs/A8_JavaScriptExecutor.java)
+
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **14: Try/Catch Block**  
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 Try/catch block: In try block, we write the code & if any errors/exceptions are returned we catch them in catch block. A good example is: Taking screenshots. We write the code and if we know code might return errors/exception then we catch them in CATCH block. In selenium, we use Try/Catch a lot.
 
 **Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.
-[A5_Screenshots_TryCatchBlock.java](A5_Screenshots_TryCatchBlock.java)
+[A5_Screenshots_TryCatchBlock.java](Selenium_Programs/A5_Screenshots_TryCatchBlock.java)
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **15: EXCEL APPLICATION**  
@@ -703,7 +707,7 @@ Using POI libraries I created below methods in my assignments.
 5: Return a cellvalue when ROW number & Column number are given  
 6: Return a cellvalue when a ROW number & Column Name are given
 
-**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [A9_Excel_InBuilt_Libraries.java](A9_Excel_InBuilt_Libraries.java)  [A9_Excel_MyOwn_Libraries.java](A9_Excel_MyOwn_Libraries.java)  [A9_Excel_ExecuteAllMyLibraries_1.java](A9_Excel_ExecuteAllMyLibraries_1.java)
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [A9_Excel_InBuilt_Libraries.java](Selenium_Programs/A9_Excel_InBuilt_Libraries.java)  [A9_Excel_MyOwn_Libraries.java](Selenium_Programs/A9_Excel_MyOwn_Libraries.java)  [A9_Excel_ExecuteAllMyLibraries_1.java](Selenium_Programs/A9_Excel_ExecuteAllMyLibraries_1.java)
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **16: TESTNG**  
@@ -891,11 +895,12 @@ Total tests run: 1, Failures: 0, Skips: 0
 
 **2: Emailable-report.html**:  also shows the same information but in Table formats with different colors. So it is very easy to understand. And in Online, you will find many programs on emailing this emailable-report.html to our email address. 
 
-**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [B1_TestNG_Annotations_BeforeAfter_Class.java](B1_TestNG_Annotations_BeforeAfter_Class.java)  [B1_TestNG_Annotations_BeforeAfter_Methods.java](B1_TestNG_Annotations_BeforeAfter_Methods.java)  [B1_TestNG_Annotations_BeforeAfter_Test.java](B1_TestNG_Annotations_BeforeAfter_Test.java)  [B1_TestNG_Annotations_BeforeAfter_TestAndMethods.java](B1_TestNG_Annotations_BeforeAfter_TestAndMethods.java)   [B1_TestNG_Annotations_DataProvider.java](B1_TestNG_Annotations_DataProvider.java)  [B1_TestNG_Assertions.java](B1_TestNG_Assertions.java)  
-[B1_TestNG_Group1.java](B1_TestNG_Group1.java)  
-[B1_TestNG_Group2.java](B1_TestNG_Group2.java)  [B1_TestNG_TestSuite2_TestCase3.java](B1_TestNG_TestSuite2_TestCase3.java)  [B1_TestNG_TestSuite2_TestCase4.java](B1_TestNG_TestSuite2_TestCase4.java)  [B1_TestNG_TestSuite_Testcase1.java](B1_TestNG_TestSuite_Testcase1.java)  [B1_TestNG_TestSuite_Testcase2.java](B1_TestNG_TestSuite_Testcase2.java)  [TestNG_Groups_WithMultipleClasses.xml](TestNG_Groups_WithMultipleClasses.java)    [TestNG_Groups_WithSingleClass.xml](TestNG_Groups_WithSingleClass.java)    
-[TestNG_Suite1.xml](TestNG_Suite1.java)
-[TestNG_Suite2.xml](TestNG_Suite2.java)
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [B1_TestNG_Annotations_BeforeAfter_Class.java](Selenium_Programs/B1_TestNG_Annotations_BeforeAfter_Class.java)  [B1_TestNG_Annotations_BeforeAfter_Methods.java](Selenium_Programs/B1_TestNG_Annotations_BeforeAfter_Methods.java)  [B1_TestNG_Annotations_BeforeAfter_Test.java](Selenium_Programs/B1_TestNG_Annotations_BeforeAfter_Test.java)  [B1_TestNG_Annotations_BeforeAfter_TestAndMethods.java](Selenium_Programs/B1_TestNG_Annotations_BeforeAfter_TestAndMethods.java)  
+[B1_TestNG_Annotations_DataProvider.java](Selenium_Programs/B1_TestNG_Annotations_DataProvider.java)  [B1_TestNG_Assertions.java](Selenium_Programs/B1_TestNG_Assertions.java)  
+[B1_TestNG_Group1.java](Selenium_Programs/B1_TestNG_Group1.java)  
+[B1_TestNG_Group2.java](Selenium_Programs/B1_TestNG_Group2.java)  [B1_TestNG_TestSuite2_TestCase3.java](Selenium_Programs/B1_TestNG_TestSuite2_TestCase3.java)  [B1_TestNG_TestSuite2_TestCase4.java](Selenium_Programs/B1_TestNG_TestSuite2_TestCase4.java)  [B1_TestNG_TestSuite_Testcase1.java](Selenium_Programs/B1_TestNG_TestSuite_Testcase1.java)  [B1_TestNG_TestSuite_Testcase2.java](Selenium_Programs/B1_TestNG_TestSuite_Testcase2.java)  [TestNG_Groups_WithMultipleClasses.xml](Selenium_Programs/TestNG_Groups_WithMultipleClasses.java)    [TestNG_Groups_WithSingleClass.xml](Selenium_Programs/TestNG_Groups_WithSingleClass.java)    
+[TestNG_Suite1.xml](Selenium_Programs/TestNG_Suite1.java)
+[TestNG_Suite2.xml](Selenium_Programs/TestNG_Suite2.java)
 	
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **17: SELENIUM GRID**  
@@ -949,7 +954,7 @@ Nodes:
 2: In below line, you mentioned browser path, so you need to confirm if really browser stored/located there?  
 System.setProperty("RemoteWebDriver.firefox.bin","/Volumes/Firefox/Firefox");  System.setProperty("RemoteWebDriver.chrome.driver", "/Users/appledev/Downloads/ChromeDriver");
 
-**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [B2_SeleniumGrid.java](B2_SeleniumGrid.java)
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [B2_SeleniumGrid.java](Selenium_Programs/B2_SeleniumGrid.java)
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **18: ANT**  
@@ -986,4 +991,4 @@ ant run
 4.3: it should run and show results over there.
 
 **Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  
-[build.xml](build.xml)
+[build.xml](Selenium_Programs/build.xml)
