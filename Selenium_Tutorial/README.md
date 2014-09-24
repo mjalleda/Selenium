@@ -894,17 +894,10 @@ Total tests run: 1, Failures: 0, Skips: 0
 
 **Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.
 [B1_TestNG_Annotations_BeforeAfter_Class.java](Selenium_Programs/B1_TestNG_Annotations_BeforeAfter_Class.java)
-
 [B1_TestNG_Annotations_BeforeAfter_Methods.java](Selenium_Programs/B1_TestNG_Annotations_BeforeAfter_Methods.java)
-
 [B1_TestNG_Annotations_BeforeAfter_Test.java](Selenium_Programs/B1_TestNG_Annotations_BeforeAfter_Test.java)
-
 [B1_TestNG_Annotations_BeforeAfter_TestAndMethods.java](Selenium_Programs/B1_TestNG_Annotations_BeforeAfter_TestAndMethods.java)   
-
-[B1_TestNG_Annotations_DataProvider.java](Selenium_Programs/B1_TestNG_Annotations_DataProvider.java)   
-
-[B1_TestNG_Assertions.java](Selenium_Programs/B1_TestNG_Assertions.java)  
-[B1_TestNG_Group1.java](Selenium_Programs/B1_TestNG_Group1.java)  
+[B1_TestNG_Annotations_DataProvider.java](Selenium_Programs/B1_TestNG_Annotations_DataProvider.java)     [B1_TestNG_Assertions.java](Selenium_Programs/B1_TestNG_Assertions.java)   [B1_TestNG_Group1.java](Selenium_Programs/B1_TestNG_Group1.java)  
 [B1_TestNG_Group2.java](Selenium_Programs/B1_TestNG_Group2.java) 
 [B1_TestNG_TestSuite2_TestCase3.java](Selenium_Programs/B1_TestNG_TestSuite2_TestCase3.java)
 [B1_TestNG_TestSuite2_TestCase4.java](Selenium_Programs/B1_TestNG_TestSuite2_TestCase4.java)  
