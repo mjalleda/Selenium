@@ -146,7 +146,7 @@ RemoteWebDriver(): It is called parent of WebDriver()
 RemoteWebDriver() Vs WebDriver():   
 RemoteWebDriver runs automation on Node machines which are registered with hub.  Where, webDriver runs automation only on the same machine.
 
-Programs are:
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.
 [A1_WebDriverObject.java](Selenium_Programs/A1_WebDriverObject.java)
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -274,6 +274,11 @@ Syntax:
 *Driver.findelement((By.id(“Textbox/edit box field id”))).sendkeys(“Please pass the input”);*  
 In java 1.8 sendkeys command doesn't support, so you need to change the JRE to JRE 1.7. Then it supports.  
 
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.
+[A1_WebDriverObject.java](Selenium_Programs/A1_Locators_HtmleElement_Button.java)
+[A1_Locators_HtmleElement_Link.java](Selenium_Programs/A1_Locators_HtmleElement_Link.java)
+[A1_Locators_HtmleElement_Textbox.java](Selenium_Programs/A1_Locators_HtmleElement_Textbox.java)
+
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **5: DROPDOWN BOX/COMBO BOX**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
@@ -297,7 +302,8 @@ WebDriverObjective.findelement(By.Xpath(“//select[@id='month']//option[1]”))
 - 2: Later, we create a object using Select class with above creating variable.
 - 3: Using this Object, we call selectByVisibleText command and pass the option value. In this case, we pass "Jan".
 
-
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.
+[A1_Locators_HtmleElement_DropDownBox.java](Selenium_Programs/A1_Locators_HtmleElement_DropDownBox.java)
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 **6: ACTIONS**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
@@ -350,6 +356,13 @@ This is a special thing.
 3: Later create two variables for source and destination from WebElement.   
 4: Get Source locator( the item which you want to drag) and store in src variable.  
 5: Get destination locator (the location where do you want to drop the item), and store into destimation variable.  6: Now, execute dragAndDrop command on the object you created with help of Src and Dest variables.
+
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.
+[A2_Actions_DoubleClick.java](Selenium_Programs/A2_Actions_DoubleClick.java)
+[A2_Actions_DragAndDrop.java](Selenium_Programs/A2_Actions_DragAndDrop.java)
+[A2_Actions_MourseMove_2ndExample.java](Selenium_Programs/A2_Actions_MourseMove_2ndExample.java)
+[A2_Actions_MouseMove.java](Selenium_Programs/A2_Actions_MouseMove.java)
+[A2_Actions_RightClick.java](Selenium_Programs/A2_Actions_RightClick.java)
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 **7: Switch Commands**  
