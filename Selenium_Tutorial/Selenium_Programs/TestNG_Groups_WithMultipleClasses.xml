@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none" preserve-order="true">
+<test name="Test">
+   <groups>
+       <run>
+         <include name="smoke"/>
+         <include name="functional"/>
+         <include name="regression"/>
+       </run>
+    </groups>
+ 
+    <classes>
+      <class name="com.sample.SelTrainin.Class_L_TestNG_Group1"/>
+      <class name="com.sample.SelTrainin.Class_L_TestNG_Group2"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+
+<!-- Relation:  Class_L_TestNG_Group1 & Class_L_TestNG_Group2 are TestCases.  -->
+<!-- And TestNG_Groups_WithSingleClass.xml & TestNG_Gorups_WithMultipleClass.xml are two TestNG Suites -->
+<!--  Description:  This is a suite and it has two groups. Smoke & Regression. And the two classes Group1 & Group2 are included in this suite. When it executes, -->
+<!-- 1: First, it executs the "Class_L_TestNG_Group1" class in groups order. So you should see below two print statments -->
+<!-- This is a Regression test case1 -->
+<!-- This is a smoke test case1 -->
+<!-- 2: Later, it executed the second class "Class_L_TestNG_Group2", so later you should find below two print statments.-->
+<!-- This is a Regression test case2 -->
+<!-- This is a smoke test case2 -->
+<!-- And they are calling two classes. -->

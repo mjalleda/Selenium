@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none" preserve-order="true">
+  <test name="TestingSuite">
+    <classes>
+      <class name="com.sample.SelTrainin.Class_J_TestNG_TestSuite_Testcase1"/>
+      <class name="com.sample.SelTrainin.Class_J_TestNG_TestSuite_Testcase2"/>
+    </classes>
+  </test> <!-- TestingSuite -->
+</suite> <!-- Suite -->
+
+<!-- Relation:  Class_J_TestNG_TestSuite_Testcase1 & Class_J_TestNG_TestSuite_Testcase2 are TestCases. And TestNG_Suite1.xml is a suite -->
+<!-- Description:  This is a suite and it is calling two classes/cases  -->

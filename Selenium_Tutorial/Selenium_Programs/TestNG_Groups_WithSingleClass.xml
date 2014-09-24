@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none" preserve-order="true">
+  <test name="TestNG_Groups" parallel="none" preserve-order="true" >
+  <groups>
+       <run>
+          <include name="smoke"/>
+          <include name="functional"/>
+          <include name="regression"/>
+       </run>      
+    </groups>
+    <classes>
+      <class name="com.sample.SelTrainin.Class_L_TestNG_Group1"/>
+    </classes>
+  </test> <!-- TestNG_Groups -->
+</suite> <!-- Suite -->
+
+
+<!-- Relation:  Class_L_TestNG_Group1 & Class_L_TestNG_Group2 are TestCases. And TestNG_Groups.xml is a suite -->
+<!-- Description:  This is a suite and it has some groups. Smoke, functional & Regression. And they are calling only one class. -->
