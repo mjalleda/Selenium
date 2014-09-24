@@ -273,7 +273,7 @@ Syntax:
 *Driver.findelement((By.id(“Textbox/edit box field id”))).sendkeys(“Please pass the input”);*  
 In java 1.8 sendkeys command doesn't support, so you need to change the JRE to JRE 1.7. Then it supports.  
 
-**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [A1_WebDriverObject.java](Selenium_Programs/A1_Locators_HtmleElement_Button.java)  [A1_Locators_HtmleElement_Link.java](Selenium_Programs/A1_Locators_HtmleElement_Link.java)  [A1_Locators_HtmleElement_Textbox.java](Selenium_Programs/A1_Locators_HtmleElement_Textbox.java)
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [A1_WebDriverObject.java](Selenium_Programs/A1_Locators_HtmleElement_Button.java)    [A1_Locators_HtmleElement_Link.java](Selenium_Programs/A1_Locators_HtmleElement_Link.java)  [A1_Locators_HtmleElement_Textbox.java](Selenium_Programs/A1_Locators_HtmleElement_Textbox.java)
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **5: DROPDOWN BOX/COMBO BOX**
@@ -299,6 +299,7 @@ WebDriverObjective.findelement(By.Xpath(“//select[@id='month']//option[1]”))
 - 3: Using this Object, we call selectByVisibleText command and pass the option value. In this case, we pass "Jan".
 
 **Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [A1_Locators_HtmleElement_DropDownBox.java](Selenium_Programs/A1_Locators_HtmleElement_DropDownBox.java)
+
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 **6: ACTIONS**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
@@ -408,7 +409,7 @@ In above example,
 
 If you close webpage two and it will not automatically change the FOCUS to webpage one. It will not change the focus. You have to tell the webdriver to change the focus to page1. 
 
-**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.   [A3_Switchto_Frames_HandlePopUpsORAlters.java](Selenium_Programs/A3_Switchto_Frames_HandlePopUpsORAlters.java)  [A3_SwitchTo_Windows.java](Selenium_Programs/A3_SwitchTo_Windows.java)  
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution  [A3_Switchto_Frames_HandlePopUpsORAlters.java](Selenium_Programs/A3_Switchto_Frames_HandlePopUpsORAlters.java)  [A3_SwitchTo_Windows.java](Selenium_Programs/A3_SwitchTo_Windows.java)  
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 **8: How to work with different browsers.**  
@@ -452,8 +453,7 @@ Windows:
 System.setProperty("webdriver.safari.driver", "<Safari driver path>");  
 WebDriver Obj1 = new SafariDriver();
 
-**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.   [A3_Switchto_Frames_HandlePopUpsORAlters.java](Selenium_Programs/A3_Switchto_Frames_HandlePopUpsORAlters.java)  
-[A3_SwitchTo_Windows.java](Selenium_Programs/A3_SwitchTo_Windows.java) 
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [A3_Switchto_Frames_HandlePopUpsORAlters.java](Selenium_Programs/A3_Switchto_Frames_HandlePopUpsORAlters.java)   [A3_SwitchTo_Windows.java](Selenium_Programs/A3_SwitchTo_Windows.java) 
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 **9: Wait/Timeout settings**
@@ -594,10 +594,7 @@ For ex:
 2: Playing/recording/paused/moving Videos files  
 3: Playing/paused Audio file
 
-**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution. 
-[A6_Verification_CompoundElements.java](Selenium_Programs/A6_Verification_CompoundElements.java)  
-[A6_Verifications.java](Selenium_Programs/A6_Verifications.java)  
-[A6_Verifications_Table.java](Selenium_Programs/A6_Verifications_Table.java)
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution   [A6_Verification_CompoundElements.java](Selenium_Programs/A6_Verification_CompoundElements.java)   [A6_Verifications.java](Selenium_Programs/A6_Verifications.java)   [A6_Verifications_Table.java](Selenium_Programs/A6_Verifications_Table.java)
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **12: ROBOT CLASS**
