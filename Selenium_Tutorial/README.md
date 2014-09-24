@@ -146,8 +146,7 @@ RemoteWebDriver(): It is called parent of WebDriver()
 RemoteWebDriver() Vs WebDriver():   
 RemoteWebDriver runs automation on Node machines which are registered with hub.  Where, webDriver runs automation only on the same machine.
 
-**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.
-[A1_WebDriverObject.java](Selenium_Programs/A1_WebDriverObject.java)
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [A1_WebDriverObject.java](Selenium_Programs/A1_WebDriverObject.java)
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 **4: LOCATORS & COMMANDS:**  
@@ -274,10 +273,7 @@ Syntax:
 *Driver.findelement((By.id(“Textbox/edit box field id”))).sendkeys(“Please pass the input”);*  
 In java 1.8 sendkeys command doesn't support, so you need to change the JRE to JRE 1.7. Then it supports.  
 
-**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.
-[A1_WebDriverObject.java](Selenium_Programs/A1_Locators_HtmleElement_Button.java)
-[A1_Locators_HtmleElement_Link.java](Selenium_Programs/A1_Locators_HtmleElement_Link.java)
-[A1_Locators_HtmleElement_Textbox.java](Selenium_Programs/A1_Locators_HtmleElement_Textbox.java)
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [A1_WebDriverObject.java](Selenium_Programs/A1_Locators_HtmleElement_Button.java)  [A1_Locators_HtmleElement_Link.java](Selenium_Programs/A1_Locators_HtmleElement_Link.java)  [A1_Locators_HtmleElement_Textbox.java](Selenium_Programs/A1_Locators_HtmleElement_Textbox.java)
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **5: DROPDOWN BOX/COMBO BOX**
@@ -357,12 +353,7 @@ This is a special thing.
 4: Get Source locator( the item which you want to drag) and store in src variable.  
 5: Get destination locator (the location where do you want to drop the item), and store into destimation variable.  6: Now, execute dragAndDrop command on the object you created with help of Src and Dest variables.
 
-**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.
-[A2_Actions_DoubleClick.java](Selenium_Programs/A2_Actions_DoubleClick.java)
-[A2_Actions_DragAndDrop.java](Selenium_Programs/A2_Actions_DragAndDrop.java)
-[A2_Actions_MourseMove_2ndExample.java](Selenium_Programs/A2_Actions_MourseMove_2ndExample.java)
-[A2_Actions_MouseMove.java](Selenium_Programs/A2_Actions_MouseMove.java)
-[A2_Actions_RightClick.java](Selenium_Programs/A2_Actions_RightClick.java)
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [A2_Actions_DoubleClick.java](Selenium_Programs/A2_Actions_DoubleClick.java)  [A2_Actions_DragAndDrop.java](Selenium_Programs/A2_Actions_DragAndDrop.java)  [A2_Actions_MourseMove_2ndExample.java](Selenium_Programs/A2_Actions_MourseMove_2ndExample.java)  [A2_Actions_MouseMove.java](Selenium_Programs/A2_Actions_MouseMove.java)  [A2_Actions_RightClick.java](Selenium_Programs/A2_Actions_RightClick.java)
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 **7: Switch Commands**  
@@ -418,6 +409,9 @@ In above example,
 
 If you close webpage two and it will not automatically change the FOCUS to webpage one. It will not change the focus. You have to tell the webdriver to change the focus to page1. 
 
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.   [A3_Switchto_Frames_HandlePopUpsORAlters.java]()  
+[A3_SwitchTo_Windows.java](Selenium_Programs/A3_SwitchTo_Windows.java)  
+
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 **8: How to work with different browsers.**  
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
@@ -460,7 +454,8 @@ Windows:
 System.setProperty("webdriver.safari.driver", "<Safari driver path>");  
 WebDriver Obj1 = new SafariDriver();
 
-
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.   [A3_Switchto_Frames_HandlePopUpsORAlters.java](Selenium_Programs/A3_Switchto_Frames_HandlePopUpsORAlters.java)  
+[A3_SwitchTo_Windows.java](Selenium_Programs/A3_SwitchTo_Windows.java) 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 **9: Wait/Timeout settings**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
@@ -524,6 +519,9 @@ Implicit Wait: During Implicit wait if the Web Driver cannot find it immediately
 Explicit Wait: There can be instance when a particular element takes more than a minute to load. In that case you definitely not like to set a huge time to Implicit wait, as if you do this your browser will going to wait for the same time for every element.  
 To avoid that situation you can simply put a separate time on the required element only. By following this your browser implicit wait time would be short for every element and it would be large for specific element.
 
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [A4_manage_Timeouts_ImplicitWait_ExplicitWait_PageTimeOutLoad.java](A4_manage_Timeouts_ImplicitWait_ExplicitWait_PageTimeOutLoad.java)
+
+
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **10: SCREENSHOTS:**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    
@@ -535,6 +533,7 @@ To avoid that situation you can simply put a separate time on the required eleme
 File src = ((TakesScreenshot)Obj1).getScreenshotAs(OutputType.FILE);  
 FileUtils.copyFile(src, new File("/Users/appledev/Desktop/Screenshot1.png"));
 
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.   [A5_ScreenShots.java](A5_ScreenShots.java)
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **11: VERIFICATIONS/RETRIVALS:**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
@@ -595,6 +594,10 @@ For ex:
 2: Playing/recording/paused/moving Videos files  
 3: Playing/paused Audio file
 
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution. 
+[A6_Verification_CompoundElements.java](A6_Verification_CompoundElements.java)  
+[A6_Verifications.java](A6_Verifications.java)  
+[A6_Verifications_Table.java](A6_Verifications_Table.java)
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **12: ROBOT CLASS**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
@@ -606,6 +609,8 @@ Why we use Keyboard OR Mouse buttons?
 In cases like above, you can use Robot class. It enters all keys which are available from Keyboard.   
 And Mouse right, left and middle(Scroll bar) clicks.
 
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  
+[A7_RobotClass.java](A7_RobotClass.java)
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **13: JAVA SCRIPT EXECUTOR CLASS**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
@@ -647,10 +652,15 @@ driver.get("http://only-testing-blog.blogspot.in/2013/11/new-test.html");
 JavascriptExecutor js=(JavascriptExecutor) driver;  
 String domain_name=(String) js.executeScript("return document.domain");
 
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution. 
+[A8_JavaScriptExecutor.java](A8_JavaScriptExecutor.java)
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **14: Try/Catch Block**  
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 Try/catch block: In try block, we write the code & if any errors/exceptions are returned we catch them in catch block. A good example is: Taking screenshots. We write the code and if we know code might return errors/exception then we catch them in CATCH block. In selenium, we use Try/Catch a lot.
+
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.
+[A5_Screenshots_TryCatchBlock.java](A5_Screenshots_TryCatchBlock.java)
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **15: EXCEL APPLICATION**  
@@ -693,6 +703,8 @@ Using POI libraries I created below methods in my assignments.
 4: Return TotalColumnCount for given sheetname  
 5: Return a cellvalue when ROW number & Column number are given  
 6: Return a cellvalue when a ROW number & Column Name are given
+
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [A9_Excel_InBuilt_Libraries.java](A9_Excel_InBuilt_Libraries.java)  [A9_Excel_MyOwn_Libraries.java](A9_Excel_MyOwn_Libraries.java)  [A9_Excel_ExecuteAllMyLibraries_1.java](A9_Excel_ExecuteAllMyLibraries_1.java)
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **16: TESTNG**  
@@ -880,6 +892,12 @@ Total tests run: 1, Failures: 0, Skips: 0
 
 **2: Emailable-report.html**:  also shows the same information but in Table formats with different colors. So it is very easy to understand. And in Online, you will find many programs on emailing this emailable-report.html to our email address. 
 
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [B1_TestNG_Annotations_BeforeAfter_Class.java](B1_TestNG_Annotations_BeforeAfter_Class.java)  [B1_TestNG_Annotations_BeforeAfter_Methods.java](B1_TestNG_Annotations_BeforeAfter_Methods.java)  [B1_TestNG_Annotations_BeforeAfter_Test.java](B1_TestNG_Annotations_BeforeAfter_Test.java)  [B1_TestNG_Annotations_BeforeAfter_TestAndMethods.java](B1_TestNG_Annotations_BeforeAfter_TestAndMethods.java)   [B1_TestNG_Annotations_DataProvider.java](B1_TestNG_Annotations_DataProvider.java)  [B1_TestNG_Assertions.java](B1_TestNG_Assertions.java)  
+[B1_TestNG_Group1.java](B1_TestNG_Group1.java)  
+[B1_TestNG_Group2.java](B1_TestNG_Group2.java)  [B1_TestNG_TestSuite2_TestCase3.java](B1_TestNG_TestSuite2_TestCase3.java)  [B1_TestNG_TestSuite2_TestCase4.java](B1_TestNG_TestSuite2_TestCase4.java)  [B1_TestNG_TestSuite_Testcase1.java](B1_TestNG_TestSuite_Testcase1.java)  [B1_TestNG_TestSuite_Testcase2.java](B1_TestNG_TestSuite_Testcase2.java)  [TestNG_Groups_WithMultipleClasses.xml](TestNG_Groups_WithMultipleClasses.java)    [TestNG_Groups_WithSingleClass.xml](TestNG_Groups_WithSingleClass.java)    
+[TestNG_Suite1.xml](TestNG_Suite1.java)
+[TestNG_Suite2.xml](TestNG_Suite2.java)
+	
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **17: SELENIUM GRID**  
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
@@ -932,6 +950,8 @@ Nodes:
 2: In below line, you mentioned browser path, so you need to confirm if really browser stored/located there?  
 System.setProperty("RemoteWebDriver.firefox.bin","/Volumes/Firefox/Firefox");  System.setProperty("RemoteWebDriver.chrome.driver", "/Users/appledev/Downloads/ChromeDriver");
 
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [B2_SeleniumGrid.java](B2_SeleniumGrid.java)
+
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **18: ANT**  
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
@@ -965,3 +985,6 @@ cd /Users/appledev/Documents/workspace/Selenium_AntProject
 ant run  
 4.2: Now right click on file (Run_ANT.bat) > select open with > others > select utilities folder > select terminal.app  
 4.3: it should run and show results over there.
+
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  
+[build.xml](build.xml)
