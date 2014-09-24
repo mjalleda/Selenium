@@ -298,8 +298,7 @@ WebDriverObjective.findelement(By.Xpath(“//select[@id='month']//option[1]”))
 - 2: Later, we create a object using Select class with above creating variable.
 - 3: Using this Object, we call selectByVisibleText command and pass the option value. In this case, we pass "Jan".
 
-**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.
-[A1_Locators_HtmleElement_DropDownBox.java](Selenium_Programs/A1_Locators_HtmleElement_DropDownBox.java)
+**Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  [A1_Locators_HtmleElement_DropDownBox.java](Selenium_Programs/A1_Locators_HtmleElement_DropDownBox.java)
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 **6: ACTIONS**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
