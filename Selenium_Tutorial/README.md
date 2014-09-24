@@ -359,8 +359,8 @@ We use switchTo() commands on Webriver object. We usually, use them to switch to
 3: WINDOWS
 
 **1: How to work with frames:**  
-WebDriver Object driver can't directly work with frames, you need to switch them to frames using switch command. 
-Look at below example.
+WebDriver Object driver can't directly work with frames, you need to switch them to frames using switch command.  Look at below example.  
+
 ![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/Frames1.png)
 
 Let say, you have a page (the yellow box) it has two frames. A frame with in a frame. Outermost frame (green box) has element2, and innermost frame has element3.   
