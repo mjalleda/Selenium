@@ -99,7 +99,7 @@ Here, automation is running simultaneously on three nodes. If one fails, the ano
 1: It is a Firefox addon. It installed only on Firefox.After you install it, restart the browser and launch Firebug.
 Now, you should see firebug (it should be similar to below picture). 
 
-![alt tag](https://github.com/mjalleda/Tutorial/blob/master/training/Screenshots/GoogleTest1403055027503.png)  
+![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/FireBug_Firepath.png)  
 
 2: On the top panel, you will find
 - Firebug icon
@@ -190,7 +190,7 @@ What if same LinkText exists for more than one html element on a same web page: 
 Most of the selenium deverlopers prefer to not use this one. Here, we need to use tree structure of html source code to write Absolute Xpath.  
 For ex: I want to write Xpath for Serach button in below html source code, how can I write?  
 
-![alt tag](https://raw.github.com/username/projectname/branch/path/to/img.png)
+![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/AbsoluteXpath.png)
 
 Now, we want to find Search. How do we find this? Remember, it is exist in third div level and at second button level. Since it is third level of div, we should write like div[3]. And button should be like button[2].  
 Absolute Xpath should be like: /html/body/div[3]/button[2]
@@ -212,7 +212,7 @@ In above, it will search for element “button” if button finds, then it will 
 
 5.3.2: Format two: writing Relative Xpath:  In below example, the hyperlinks (gmail, images,  +you) are have same classname (see below code, cpied from firebug) and data-ved too. But their hyperlinks/hrefs are different, so we can use their href values.  
 
-![alt tag](https://raw.github.com/username/projectname/branch/path/to/img.png)
+![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/Relative_Xpath.png)
 
 For +You://a[@href='https://plus.google.com/?gpsrc=ogpy']  
 For Gmail://a[@href='https://mail.google.com/mail/?tab=wm']  
@@ -221,7 +221,7 @@ For Images://a[@href='https://www.google.co.in/imghp?hl=en']
 5.3.3 Format 3:  writing Relative Xpath: 
 On google homepage, there are three textlinks, which have same id lcoator and don't have name locator. In this case, we can either use textlink OR Xpath. Below html code you will find for these three htmllinks.  
 
-![alt tag](https://raw.github.com/username/projectname/branch/path/to/img.png)
+![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/Relative_Xpath_Foramt3.png)
 
 So, how to write a Xpath using paren'ts id. Here parent is “span” and child is “a href”.  
 For Element: hyperlink “Advertisement”  
@@ -361,7 +361,7 @@ We use switchTo() commands on Webriver object. We usually, use them to switch to
 **1: How to work with frames:**  
 WebDriver Object driver can't directly work with frames, you need to switch them to frames using switch command. 
 Look at below example.
-![alt tag](https://raw.github.com/username/projectname/branch/path/to/img.png)
+![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/Frames1.png)
 
 Let say, you have a page (the yellow box) it has two frames. A frame with in a frame. Outermost frame (green box) has element2, and innermost frame has element3.   
 Now, we have two tasks. We need to click on Element3 first and then on Element1 & then on element2. Red –> Yellow → Green.  
@@ -387,7 +387,7 @@ Why do we use hashcodes why not other locators?
 Because usually webpages doesn't get any locators like id, name..etc. But some times we see locators like target. In that case, we can use target, o.w. We have to depend on hashcode only.  
 Task1: Let say, you have two pages ( imagine, page2 openeed by page1). Page1 refers to Yellow box & page2 refers to blue box. Now, we have to click on element2 and then close webpage2 and then page1. For this, we need to change the webdriverobject focus to page2. GetwindowHandle() command returns only current pages hashcode but getwindowHandles() command returns all opened pages hashcodes. 
 
-![alt tag](https://raw.github.com/username/projectname/branch/path/to/img.png)  
+![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/Frames_2.png)  
 
 1: First store current pages hashcode into a string variable1.  
 2: Now, store all pages hashcodes into a set.  
