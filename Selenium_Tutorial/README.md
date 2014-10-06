@@ -1,4 +1,4 @@
-As part of my learning, I posted [Selenium Tutorial](#a1) and programs. Programs are available in [src folder](src/com/sample/SelTrainin) and Tutorial (Notes) is posted below. 
+As part of my learning, I posted [Selenium Tutorial](#a1) and programs. Programs are available in [src folder](Selenium_Programs/) and Tutorial (Notes) is posted below. 
 
 Selenium Tutorial: 
 ============
