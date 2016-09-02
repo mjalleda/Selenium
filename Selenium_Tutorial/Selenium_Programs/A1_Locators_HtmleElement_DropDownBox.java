@@ -26,8 +26,7 @@ public class A1_Locators_HtmleElement_DropDownBox {
 		System.out.println("2: Selected options directly from dropdown using Xpath value.");
 		
 		//3: With the help of selectByIndex() method.
-		WebElement Var1;
-		Var1 = Obj1.findElement(By.id("year"));
+		WebElement Var1 = Obj1.findElement(By.id("year"));
 		Select Var2 = new Select(Var1);
 		Var2.selectByVisibleText("2013");
 		System.out.println("3: Used SelectByVisibleText method and selected options from dropdown box");
