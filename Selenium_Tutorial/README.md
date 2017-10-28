@@ -14,8 +14,8 @@ I've used below tools/software during my learning and I listed them here:
 2: Selenium WebDriver2 from Selenium website.  
 3: Eclipse.  
 4: Java.  
-5: Firebug & Fire path (Addons for Firefox).  
-6: Addons for Safari, Chrome and IE.  
+5: Firebug & Fire path (Add-ons for Firefox).  
+6: Add-ons for Safari, Chrome and IE.  
 7: Ant.  
 8: TestNG and Excel sheets  
 9: Excel Application's POI Jars.  
@@ -48,7 +48,7 @@ SELENIUM TUTORIAL
 **1: ABOUT SELENIUM**   
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 1.1: Selenium is a web automation tool. 
- - It is a Firefox addon
+ - It is a Firefox add-on
  - But can run testings automation on any browser and on any Os.
  -  It supports many languages. Most popular is Selenium with JAVA.
  -  It supports Web application testing on,
@@ -71,7 +71,7 @@ SELENIUM TUTORIAL
 Both are automation tools but Appium is only Mobile Automation tool. It is easy to learn Appium if you already know Selenium.
 
 1.5: Selenium Components:  
-1.5.1: IDE: It is addon on firefox browser only.  
+1.5.1: IDE: It is add-on on firefox browser only.  
 1.5.2:  Selenium Server:RC: It is also called, Remote control OR Selenium 1.0 Or Version 1.0 OR Selenium Server.
 This is deprecated 4years back.
 WebDriver: It is also called
@@ -79,7 +79,7 @@ WebDriver: It is also called
 - Version 2.0
 - Selenium Server.
 - Native browser
-- Why its called native browser: When selenium automation starts to run, it opens a fresh browser for testing. If browser have addons,bookmarks or cookies, WebDriver removes all these and opens a fresh browser (without any of these).   
+- Why its called native browser: When selenium automation starts to run, it opens a fresh browser for testing. If browser have add-ons,bookmarks or cookies, WebDriver removes all these and opens a fresh browser (without any of these).   
 
 1.5.3:GRID: With the help of this tool, you can run selenium automation scripts from remote box. 
 How do you run remotely: Here you talk about hub and nodes. Lets take example. You have a hub and three nodes. . 
@@ -94,7 +94,7 @@ Here, automation is running simultaneously on three nodes. If one fails, the ano
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   
 **2:FIREBUG & FIREPATH**  
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
-1: It is a Firefox addon. It installed only on Firefox.After you install it, restart the browser and launch Firebug.
+1: It is a Firefox add-on. It installed only on Firefox.After you install it, restart the browser and launch Firebug.
 Now, you should see firebug (it should be similar to below picture). 
 
 ![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/FireBug_Firepath.png)  
@@ -424,9 +424,9 @@ If you close webpage two and it will not automatically change the FOCUS to webpa
 **8: How to work with different browsers.**  
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 1: Usually, automation runs faster on IE and chrome than firefox.  
-2: download addon from selenium download page. The 64bit version works on 32bit system.  
+2: download add-on from selenium download page. The 64bit version works on 32bit system.  
 
-1: How to configure IE/Chrome addons into your project/class: In our java class, write below line of code.  
+1: How to configure IE/Chrome add-ons into your project/class: In our java class, write below line of code.  
 WebdriverObject.setproperty(“webdriver.chrome.driver”.”//Volumes//Chrome//Chrome”);  
 WebdriverObject.setproperty(“webdriver.IE.driver”.”//Volumes//IE//IE”);  
 Note: make sure, yours IE/Chrome is stored in volumes folder.
@@ -956,6 +956,7 @@ Here, you will find notes with an example.
 Let say, you have a automation framework/suite in a machine called A. And you want to run this automation on other machines B & Machine C at same time. You need to run the automation from machine A (hence it is called hub) and B & C are called nodes.  
 How to do this? You can achieve this by Selenium GRID. In olden days, Selenium GRID was provided as a separate jar file but recently it was included in selenium server jar file. Hence we need to start selenium server jar file to start selenium GRID. Along with that, we need to mention the role, Which means, if the mahcine is acting as a hub or node?  
 Port number is optional. Usually, it starts on port number 4444. [this is called default port number]. But for any reason if it is not starting on 4444, you can pass port number parameter. 
+(more information: https://github.com/SeleniumHQ/selenium/wiki/Grid2)
 
 **2: Hub & Node connections**  
 1: First, you  need to start hub.  
