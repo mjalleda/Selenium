@@ -60,6 +60,7 @@ SELENIUM TUTORIAL
 - And also used for Mobile web application's testing. (For ex: Safari on iOS, Chrome in Android). You can run automation on both. Simulators and also on physical devices (by connecting them to computer).
 
 1.3: Selenium Drawbacks:  Sometimes selenium might not work well with below actions or components.
+- can we test desktop application using selenium  : The simple answer is no
 - It doesn't work well on flex OR flash.
 - Sometimes right click options doesn't work
 - Multiple windows
@@ -75,17 +76,16 @@ Both are automation tools but Appium is only Mobile Automation tool. It is easy 
 - Open the newt on browser
 - Open the new window on browser
 - Object Location
-- 3.5.1: IDE: It is addon on firefox browser only.  
-4.5.2:  Selenium Server:RC: It is also called, Remote control OR Selenium 1.0 Or Version 1.0 OR Selenium Server.
-This is deprecated 4years back.
-WebDriver: It is also called
-- Selenium 2.0/WebDriver
-- Version 2.0
+
+1.5.1: IDE: It is addon on both firefox and chrome browsers. It doesn't work on other browsers like safari, IE. 
+1.5.2:  Selenium Server:RC: It is also called, Remote control OR Selenium 1.0 Or Version 1.0 OR Selenium Server.
+This is deprecated 4years back.So we don't use it anymore.
+1.5.3: WebDriver: Definition: Selenium WebDriver is a collection of open source APIs which are used to automate the testing of a web application.Selenium Webdriver is platform-independent since the same code can be used on different Operating Systems like Microsoft Windows, Apple OS and Linux.It is also called
 - Selenium Server.
 - Native browser
 - Why its called native browser: When selenium automation starts to run, it opens a fresh browser for testing. If browser have addons,bookmarks or cookies, WebDriver removes all these and opens a fresh browser (without any of these).   
 
-1.5.3:GRID: With the help of this tool, you can run selenium automation scripts from remote box. 
+1.5.4:GRID: With the help of this tool, you can run selenium automation scripts from remote box. 
 How do you run remotely: Here you talk about hub and nodes. Lets take example. You have a hub and three nodes. . 
 Node 1: With MAC OS with Safari browser
 Node 2: Linux OS with Chrome browser
