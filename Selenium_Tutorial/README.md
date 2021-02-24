@@ -73,7 +73,22 @@ Both are automation tools but Appium is only Mobile Automation tool. It is easy 
 
 1.5: Selenium Components: IDE, WebDriver and Grid.
 1.5.1: IDE: It is addon on both firefox and chrome browsers. It doesn't work on other browsers like safari, IE. 
-1.5.2:  Selenium Server:RC: It is also called, Remote control OR Selenium 1.0 Or Version 1.0 OR Selenium Server.
+Open IDE in chrome/firefox and you found below. 
+1: You can create project/cases in it.
+2: First in the IDE, you found below 
+command, target and value : For ex: 
+Command: Type,  
+Target: textbox,
+Value:  hello 
+
+It has,
+2: Record/Playback options
+3: Debug option
+4: Putting breakpoints for debugger
+5: References for each command : good helpfile for references/reading a command (ex: type)
+6: Export into different language. Ex: java.
+
+3.5.2:  Selenium Server:RC: It is also called, Remote control OR Selenium 1.0 Or Version 1.0 OR Selenium Server.
 This is deprecated 4years back.So we don't use it anymore.
 1.5.3: WebDriver: Definition: Selenium WebDriver is a collection of open source APIs which are used to automate the testing of a web application.Selenium Webdriver is platform-independent since the same code can be used on different Operating Systems like Microsoft Windows, Apple OS and Linux.It is also called
 - Selenium Server.
