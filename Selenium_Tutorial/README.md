@@ -70,9 +70,13 @@ SELENIUM TUTORIAL
 1.4: Selenium VS Appium: 
 Both are automation tools but Appium is only Mobile Automation tool. It is easy to learn Appium if you already know Selenium.
 
-1.5: Selenium Components:  
-1.5.1: IDE: It is addon on firefox browser only.  
-1.5.2:  Selenium Server:RC: It is also called, Remote control OR Selenium 1.0 Or Version 1.0 OR Selenium Server.
+1.5: Selenium Components:  Server Server 4.0 alpha5 is released in 2020: and its new features are : https://www.youtube.com/watch?v=CZVDmDwHnic
+- Capture screenshot of webelement
+- Open the newt on browser
+- Open the new window on browser
+- Object Location
+- 3.5.1: IDE: It is addon on firefox browser only.  
+4.5.2:  Selenium Server:RC: It is also called, Remote control OR Selenium 1.0 Or Version 1.0 OR Selenium Server.
 This is deprecated 4years back.
 WebDriver: It is also called
 - Selenium 2.0/WebDriver
