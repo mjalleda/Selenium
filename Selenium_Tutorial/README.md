@@ -1005,6 +1005,19 @@ In this scenario, we use RemoteWebDriver() class.
 1st line: Create a Driver Object of type RemoteWebDriver()  
 2nd line: During this creation you need to pass one capabilities of that driver. For that, we call/use DesiredCapabilities class. 
 DesireCapabilities: Basically, you can set/adjust some settings on node machines. For ex: you want to disabled JavaScript on a node or platform setting, Or to set browsername, etc.. 
+	
+File classpathRoot = new File("/");
+File aDir = new File(classpathRoot, "provide iPhoneStimulator path");
+File applic = new File(aDir, "MobileSafari.app");
+
+DesiredCapabilities capabil = new DesiredCapabilities();
+capabil.setCapability(CapabilityType.BROWSER_NAME, "iOS");
+capabil.setCapability(CapabilityType.PLATFORM, "Mac");
+capabil.setCapability(CapabilityType.VERSION, "10.0");
+capabil.setCapability("applic", applic.getAbsolutePath());
+capabil.setCapability("applic", "iphone");
+descap = DesiredCapabilities.iphone();
+driver0.set(new RemoteWebDriver(new URL("http://127.0.0.1:8080/wd/hub"), descap));
 
 **4: Hub & NodeMachine Requirements:**  
 HUB:  
