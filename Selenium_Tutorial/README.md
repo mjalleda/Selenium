@@ -547,7 +547,7 @@ Obj1.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
 **Difference between Implicit & Explicit waits**  
 Implicit Wait: During Implicit wait if the Web Driver cannot find it immediately because of its availability, the WebDriver will wait for mentioned time and it will not try to find the element again during the specified time period. Once the specified time is over, it will try to search the element once again the last time before throwing exception. The default setting is zero. Once we set a time, the Web Driver waits for the period of the WebDriver object instance.  
 Explicit Wait: There can be instance when a particular element takes more than a minute to load. In that case you definitely not like to set a huge time to Implicit wait, as if you do this your browser will going to wait for the same time for every element.  
-To avoid that situation you can simply put a separate time on the required element only. By following this your browser implicit wait time would be short for every element and it would be large for specific element.
+To avoid that situation you can simply put a separate time on the required element only. By following this your browser implicit wait time would be short for every element and it would be large for specific element. Explicit wait polls every 500 milliseconds to check condition met or not? if not continious to wait and poll until timeout is elapsed. 
 
 **Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  
 [A4_manage_Timeouts_ImplicitWait_ExplicitWait_PageTimeOutLoad.java](Selenium_Programs/A4_manage_Timeouts_ImplicitWait_ExplicitWait_PageTimeOutLoad.java)
