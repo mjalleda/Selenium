@@ -32,15 +32,16 @@ Selenium Tutorial Index
 7: Switch Commands  
 8: How to work with different browsers.  
 9: Wait/TimeOut Settings  
-10: Screenshot  
-11: Verifications  
-12: Robot Class.  
-13: Java Script Executor  
-14: TRY/Catch block  
-15: Excel   
-16. TestNG  
-17. Selenium GRID  
-18. ANT
+10: Screenshots OR AutoIt
+11: Video Testing & Video Streaming
+12: Verifications  
+13: Robot Class.  
+14: Java Script Executor  
+15: TRY/Catch block  
+16: Excel   
+17. TestNG  
+18. Selenium GRID  
+19. ANT
 
 SELENIUM TUTORIAL
 ------------------------  
@@ -495,7 +496,7 @@ There are couple of ways, where we can set wait period.
 
 **1: Thread.sleep(10000);**  
 This is java code.  
-It will work with microseconds. If you give in 100000, it will take it as 10 second.  
+It will work with milliseconds. If you give in 10000, it will take it as 10 second.  
 You need to add “throws InteruptedException” to the class.   
 Public static void main(String[] args) throws InterruptedException.  
 It will blindly wait for 10 seconds, no matter if the next line visible/statment appeared/satisfied. It just wait for 10 seconds.  
@@ -565,6 +566,14 @@ FileUtils.copyFile(src, new File("/Users/appledev/Desktop/Screenshot1.png"));
 
 **Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.   
 [A5_ScreenShots.java](Selenium_Programs/A5_ScreenShots.java)
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
+**11: AutoIT:**
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
+**12: Video Testing VS Video Streaming:**
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **11: VERIFICATIONS/RETRIVALS:**
