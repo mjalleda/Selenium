@@ -31,12 +31,12 @@ Selenium Tutorial Index
 6: Actions  
 7: Switch Commands  
 8: How to work with different browsers.  
-9: Wait/TimeOut Settings
-10: How to capture screenshot during testing
-11: How to capture video during testing
-12: File Upload options
+9: Wait/TimeOut Settings.
+10: How to capture screenshot during testing.
+11: How to capture video during testing.
+12: File Upload options.
 13: Verifications/Selenium Methods/funcitons.    
-14: Robot Class.  
+14: Robot Class.
 15: Java Script Executor  
 16: TRY/Catch block  
 17: Excel   
@@ -637,6 +637,7 @@ Ex: File uplaod dialog: https://stackoverflow.com/questions/11256732/how-to-hand
 1: First download autoIT and autoIT-editor from internet.  
 What is Autoit-Editor does: In editor, we need to write autoIT.exe script file, for this we can use methods/commands provided by autoIT library/apis. 
 What is finder tool ? : In AutoIT folder, there is called Finder tool which helps to find the button locators on file upload dialog. (Below is finder tool)
+![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/autoIT_Finder.png)
 ￼
 Why do we need to write autoIT.exe file?  It contains below steps. This file we can directly use in Selenium Testcase. 
 ControlFocus(); This is used to focus on the file upload  dialog > Filenmae input field. 
@@ -649,6 +650,8 @@ Ex: https://ps.uci.edu/~franklin/doc/file_upload.html > Now click on browse butt
 3: Open autoIT-editor > open a new file > save it as “autoit_fileupload” in “/Users/downloads/test”. 
 4: Now, open autoIT finder tool > capture input field in the dialog. 
 It should show, title, class, class, and instance. Which are needed in script file. 
+
+![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/autoIT_Script.tiff)
 
 ControlFocus : takes three parameters. Title, text and controlID. 
 Title, contorldID are must, text is optional. 
