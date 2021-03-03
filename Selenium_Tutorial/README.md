@@ -590,18 +590,41 @@ File src = ((TakesScreenshot)Obj1).getScreenshotAs(OutputType.FILE);
 FileUtils.copyFile(src, new File("/Users/appledev/Desktop/Screenshot1.png"));
 
 **Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.   
-[A5_ScreenShots.java](Selenium_Programs/A5_ScreenShots.java)
+[A5_ScreenShots.java](Selenium_Programs/A5_ScreenShots.java)  
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
-**11: AutoIT:**
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
-**12: Video Testing VS Video Streaming:**
+**12: Video Testing VS Video Streaming :**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   
+**: How do you capture/record test execution? :**
+ATUTestRecorder: https://www.tadigital.com/insights/perspectives/how-to-video-record-selenium-test-cases
+1: upload below two jar files into your project
+-	ATUTestRecorder.jar
+-	ATUReporter_Selenium_testNG.jar
+2: Import the ATUTestRecorder package
+import atu.testrecorder.ATUTestRecorder;
+3. Create a folder to store recorded videos
+4: Now, create a recorder object. Then start recording it, and stop recording it.
+
+
+ATUTestRecorder recorder = new ATUTestRecorder(“Provide path to store”, “provide file name”, false);
+recorder.start;
+////(it will start recording, so you can execute what do you want to record here). 
+recorder.stop. 
+
+Remember: ATUTestRecorder object throws exception, so put this code in try catch block.
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
-**11: VERIFICATIONS/RETRIVALS:**
+**13: How do you upload files in Selenium :**
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
+There ways: 
+1: SendKeys
+2: Robot Class
+3: AutoIt(which works only in windows OS)
+
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
+**14: VERIFICATIONS/RETRIVALS:**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 There are many verifications provided for different purposes.  
 1: getText(), getSize(), getLocation(), getAttributes(), getTagName() & getCSSValues.  
