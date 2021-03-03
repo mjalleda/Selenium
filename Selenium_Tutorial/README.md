@@ -489,8 +489,7 @@ WebDriver Obj1 = new SafariDriver();
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 **9: Wait/Timeout settings**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
-**Difference types of waits: which we uses in Selenium automation scripts; ** 
-Below are waits: 
+**: Below Are wait::**
 1: Thread.sleep()
 2: Implicit Wait: 
 3: Expicit way : WebdriverWait & FluentWait
