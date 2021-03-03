@@ -31,17 +31,18 @@ Selenium Tutorial Index
 6: Actions  
 7: Switch Commands  
 8: How to work with different browsers.  
-9: Wait/TimeOut Settings  
-10: Screenshots OR AutoIt
-11: Video Testing & Video Streaming
-12: Verifications  
-13: Robot Class.  
-14: Java Script Executor  
-15: TRY/Catch block  
-16: Excel   
-17. TestNG  
-18. Selenium GRID  
-19. ANT
+9: Wait/TimeOut Settings
+10: How to capture screenshot during testing
+11: How to capture video during testing
+12: File Upload options
+13: Verifications/Selenium Methods/funcitons.    
+14: Robot Class.  
+15: Java Script Executor  
+16: TRY/Catch block  
+17: Excel   
+18. TestNG  
+19. Selenium GRID  
+20. ANT
 
 SELENIUM TUTORIAL
 ------------------------  
@@ -495,7 +496,6 @@ WebDriver Obj1 = new SafariDriver();
 3: Expicit way : WebdriverWait & FluentWait
 4: PageTimeOutLoad
 
-
 **1: Thread.sleep(10000);**  
 This is java code.  
 It will work with milliseconds. If you give in 10000, it will take it as 10 second.  
@@ -579,7 +579,7 @@ Obj1.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
 
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
-**10: SCREENSHOTS:**
+**10: How to capture screenshot during test:**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    
 1: You can take screenshots only for a webpage. Not for popups/alerts/dialogs.  
 2:  You can save screenshots into your local machine and later verify it with Java code.   
@@ -593,7 +593,7 @@ FileUtils.copyFile(src, new File("/Users/appledev/Desktop/Screenshot1.png"));
 [A5_ScreenShots.java](Selenium_Programs/A5_ScreenShots.java)  
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
-**12: Video Testing VS Video Streaming :**
+**12: How to capture video during test :**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   
 **: How do you capture/record test execution? :**
 ATUTestRecorder: https://www.tadigital.com/insights/perspectives/how-to-video-record-selenium-test-cases
@@ -604,7 +604,6 @@ ATUTestRecorder: https://www.tadigital.com/insights/perspectives/how-to-video-re
 import atu.testrecorder.ATUTestRecorder;
 3. Create a folder to store recorded videos
 4: Now, create a recorder object. Then start recording it, and stop recording it.
-
 
 ATUTestRecorder recorder = new ATUTestRecorder(“Provide path to store”, “provide file name”, false);
 recorder.start;
@@ -621,10 +620,60 @@ There ways:
 2: Robot Class
 3: AutoIt(which works only in windows OS)
 
+1: SendKeys: 
+WebDriver driver = new ChromeDriver();
+Driver.SendKeys(“c://desktop/testing/test1.txt”):
 
+2: Robot class
+
+3: AutoIT
+
+**: AutoIT :**
+Remember: 
+1: It only works on Windows not on MAC.
+2: Why do we use autoIT for file upload:  Selenium supports only web application automation not desktop based automation. During file upload, when you are trying to upload a file a file upload dialog appears which is Desktop dialog not web dialog, hence selenium doesn’t recognizes it hence it doesn’t upload a file. 
+Ex: File uplaod dialog: https://stackoverflow.com/questions/11256732/how-to-handle-windows-file-upload-using-selenium-webdriver
+
+1: First download autoIT and autoIT-editor from internet.  
+What is Autoit-Editor does: In editor, we need to write autoIT.exe script file, for this we can use methods/commands provided by autoIT library/apis. 
+What is finder tool ? : In AutoIT folder, there is called Finder tool which helps to find the button locators on file upload dialog. (Below is finder tool)
+￼
+Why do we need to write autoIT.exe file?  It contains below steps. This file we can directly use in Selenium Testcase. 
+ControlFocus(); This is used to focus on the file upload  dialog > Filenmae input field. 
+ControlSetText(); This is used to enter filepath in the input field.
+ControlSetClcik()  This is used to click on open button (which upload the file)
+
+2: Now, open a webpage where you have upload button is available, for ex: 
+Ex: https://ps.uci.edu/~franklin/doc/file_upload.html > Now click on browse button > which will show FileUplaod Dialog. 
+
+3: Open autoIT-editor > open a new file > save it as “autoit_fileupload” in “/Users/downloads/test”. 
+4: Now, open autoIT finder tool > capture input field in the dialog. 
+It should show, title, class, class, and instance. Which are needed in script file. 
+
+ControlFocus : takes three parameters. Title, text and controlID. 
+Title, contorldID are must, text is optional. 
+Title you get from finder, but what is control id? ControlId means : class + instance. In this case, it will Edit+1 = Edit1.  
+ControlFocus(“open”, ””, “Edit1”); 
+
+ControlSetText(title, text, controlID, new Text)
+Title, controlID, new Text  are must, text is optional. 
+Here new text = means, enter the file location which you want to upload along with filename and extension 
+ControlFocus(“open”, ””, “Edit1”, “/Users/downloads/upload/imag1.png”); 
+
+ControlClcik(title, text, controlID) : For this use finder and get locator for open button which uploads the file. 
+Title, controlID are must, text is optional. 
+ControlFocus(“open”, ””, “Button1”, “/Users/downloads/upload/imag1.png”); 
+
+4; Now click on save button, as you remember you saved this file in as /Users/downloads/test/autoit_fileupload
+5: You need to compile this file. Right click and compile script option. Now it will create .exe file. Which you will find I as auto_fileupload.exe . Which is ready to upload into selenium script.
+6: Open selenium script, click on browse button in the https://ps.uci.edu/~franklin/doc/file_upload.html 
+7: now write below code. 
+Runtime.getRuntile.exec(“Users/downloads/test/autoit_fileupload/autoit_fileuplaod.exe”); 
+
+8: Here you are uploading above script file : which will open dialog and upload a file. i.e., /Users/downloads/upload/imag1.png
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
-**14: VERIFICATIONS/RETRIVALS:**
+**14: VERIFICATIONS/RETRIVALS/Selenium mehods/funcitons:**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 There are many verifications provided for different purposes.  
 1: getText(), getSize(), getLocation(), getAttributes(), getTagName() & getCSSValues.  
