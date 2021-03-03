@@ -650,7 +650,6 @@ Ex: https://ps.uci.edu/~franklin/doc/file_upload.html > Now click on browse butt
 3: Open autoIT-editor > open a new file > save it as “autoit_fileupload” in “/Users/downloads/test”. 
 4: Now, open autoIT finder tool > capture input field in the dialog. 
 It should show, title, class, class, and instance. Which are needed in script file. 
-
 ![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/autoIT_Script.tiff)
 
 ControlFocus : takes three parameters. Title, text and controlID. 
