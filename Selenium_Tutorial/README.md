@@ -489,10 +489,13 @@ WebDriver Obj1 = new SafariDriver();
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 **9: Wait/Timeout settings**
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
-There are couple of ways, where we can set wait period.  
-1: thread.sleep(1000)  
-2: Implicit wait  
-3: Explicit  Wait 
+**Difference types of waits: which we uses in Selenium automation scripts; ** 
+Below are waits: 
+1: Thread.sleep()
+2: Implicit Wait: 
+3: Expicit way : WebdriverWait & FluentWait
+4: PageTimeOutLoad
+
 
 **1: Thread.sleep(10000);**  
 This is java code.  
@@ -502,8 +505,18 @@ Public static void main(String[] args) throws InterruptedException.
 It will blindly wait for 10 seconds, no matter if the next line visible/statment appeared/satisfied. It just wait for 10 seconds.  
 Since it will blindly waits and doesn't check if the following condition is satisfied.
 
-**2: Implicit wait settings:**   
-Which is a selenium class, you need implicitly tell, wait for certain statement/condition/element to satisfied/appeared. Otherwise return an error.  
+**2: ImplicitWait or Global wait: ;**  
+1: It is declared on driver object not on web element. Due to this: It is alive until driver object is alive. Once driver object dies, it dies as well. It means, when driver object is searching for an element(s) then immediately implictwait will be invoked/applied to confirm whether element found in a given time period. Hence it is called global wait (which means, you are declaring only one and it is applicable for each find element instance). 
+Implicit wait which allows you to halt the WebDriver for a particular period of time until the WebDriver locates a desired element on the 
+web page.
+2: The key point to note here is, unlike Thread.sleep(), it does not wait for the complete duration of time. In case it finds the element before the duration specified, it moves on to the next line of code execution, thereby reducing the time of script execution.
+3: The default time for Implicit wait is zero. 
+4: If element not found in given timeout period, then it returns exception Element Not Found Exception. 
+5: Ex:  let's say 5 seconds before each element or a lot of elements on the webpage load. Now, you wouldn't want to write the same code again and again. Hence, implicit wait. However, if you want to wait for only one element, then use explicit wait.
+
+1: Advantage: You are declaring only once and it is going to be applied for each time when driver is finding for element(s). 
+2: Disadvantage: 
+- Some elements may load quickly, before you even perform implicit wait, here you are wasting time
 
 Lets take an example.  
 Obj1.manage().timeouts().implicitlyWait(Argument1, TimeUnit.SECONDS);  
@@ -518,16 +531,14 @@ In this, we need to pass the value and argument. Argument1 should can be from Na
 2: Immediately in next line, we are passing a htmlelement click.   
 3: here, selenium checks every second if that htmlelement appears, if so it will go to next line, if not it keeps on checks 120 seconds, after 120 seconds, it will return an error.
 
-**3: Explicit Wait settings:**  
-We need to explicitly tell, if that condition appears, then it will continue. This is mostly used for  
-If an element is presented/visible.  
-If an element is not visible, then continue.   
-And also used for many others like if alters are present, if frame is present, if element is enabled/disabled, if element ready to be clickable,   
-
-WebDriverWait wait = new WebDriverWait(Obj1, 120);   wait.until(ExpectedConditions.presenceOfElementLocated(By.id("html element locator")));  
-
-1: First we need to create a Object using with “WebDriverWait” class.  
-2: Here, we use Until() command, ExpectedConditions(), later we pass our condition.   
+**3: ExplicitWait or local wait: ;**  
+1; Unlike Implicit wait, it is not global wait, it is local wait, where you can write explicit wait for each scenario/elemen/condition. It is applied to only one condition/scenario/element. 
+2: This is mostly used for  
+- If an element is presented/visible.  
+- If an element is not visible, then continue.   And also used for many others like if alters are present, 
+- if frame is present, 
+- if element is enabled/disabled, 
+- if element ready to be clickable,   
 
 For ex:  
 1: If you upload a document, and the spinner appears for uploading/downloading, in that case, we can use explict wait and we can ask to “wait until spinner disappear”. Here, we can use method “invisibilityOfElementLocated()”
@@ -539,15 +550,30 @@ When frame appears...
 
 3: By default, it takes in seconds.
 
-4: PageTimeOutLoad: This is a special case, we can't write any of above timeouts on this, because most of the time we don't write/provide any arguments for it. Some webpages, you may find “target” but not in all webpages. Anyways, since no htmlelement is available then how to handle timeouts for a page? Selenium provided a special command for it, it is called PageTimeOutLoad(). It checks if page loaded within given time, otherwise return an exception. The code should be,  
+Explicit wait: Explicit wait is of two types:
+1) WebDriverWait
+2) FluentWait
+
+** WebDriverwait :** 
+Here, it takes two parameters: 
+- 1: Maximum timeout period: 
+- 2: Expected condition for a web element
+
+** Fluent wait :** 
+It is more advanced type than web driver wait, its has below parameters, 
+- 1: Maximum timeout period: 
+- 2: Expected condition for a web element
+Additionally, it also has two more parameters, which are: 
+- 3: How often/frequently it should poll/checks for the expected condition
+- 4: Ignoring some specific exceptions if expected condition
+Ex: Frequency is set to 5 seconds and the maximum time is set to 30 seconds. Thus this means that it will check/poll for the element on the web page at every 5 seconds for the maximum time of 30 seconds. If the element is located within this time frame it will perform the operations else it will throw an"
+Exception
+
+**4: PageTimeOutLoad ;**  
+This is a special case, we can't write any of above timeouts on this, because most of the time we don't write/provide any arguments for it. Some webpages, you may find “target” but not in all webpages. Anyways, since no htmlelement is available then how to handle timeouts for a page? Selenium provided a special command for it, it is called PageTimeOutLoad(). It checks if page loaded within given time, otherwise return an exception. The code should be,  
 Obj1.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
 
 1: Remember, we are using manage() & timeouts() on our webdriverobject and passing pageLoadTimeout(). It checks if page loaded or not, it checks each and every second, if it doesn't find page in 120 seconds, then it will return an exception.
-
-**Difference between Implicit & Explicit waits**  
-Implicit Wait: During Implicit wait if the Web Driver cannot find it immediately because of its availability, the WebDriver will wait for mentioned time and it will not try to find the element again during the specified time period. Once the specified time is over, it will try to search the element once again the last time before throwing exception. The default setting is zero. Once we set a time, the Web Driver waits for the period of the WebDriver object instance.  
-Explicit Wait: There can be instance when a particular element takes more than a minute to load. In that case you definitely not like to set a huge time to Implicit wait, as if you do this your browser will going to wait for the same time for every element.  
-To avoid that situation you can simply put a separate time on the required element only. By following this your browser implicit wait time would be short for every element and it would be large for specific element. Explicit wait polls every 500 milliseconds to check condition met or not? if not continious to wait and poll until timeout is elapsed. 
 
 **Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  
 [A4_manage_Timeouts_ImplicitWait_ExplicitWait_PageTimeOutLoad.java](Selenium_Programs/A4_manage_Timeouts_ImplicitWait_ExplicitWait_PageTimeOutLoad.java)
