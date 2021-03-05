@@ -1006,6 +1006,11 @@ TestNG generates the results in many forms. But most used ones are:
 2: Emailable Report
 
 **1: Console:** For passed & Failed cases. It contains,
+
+![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/ConsoleReport_Part1.png)
+
+![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/ConsoleReport_Part2.png)
+
 - The xml file location  
 - Print statements  
 - If it is passed, it shows @Test annotation method name with PASSED if it passed  
