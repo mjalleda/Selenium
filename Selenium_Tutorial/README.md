@@ -1014,7 +1014,7 @@ TestNG generates the results in many forms. But most used ones are:
 - The xml file location  
 - Print statements  
 - If it is passed, it shows @Test annotation method name with PASSED if it passed  
-- If it is failed, it shows @Test annotation method name here with FAILED mark. It also contains           Assertion failure command.  
+- If it is failed, it shows @Test annotation method name here with FAILED mark. It also contains Assertion failure command.  
 - Default Test, number of test run and faillures and skip  
 - Default Suite, number of test run and faillures and skips  
 - Time taken for each output result files.
@@ -1042,6 +1042,8 @@ Total tests run: 1, Failures: 0, Skips: 0
 
 
 **2: Emailable-report.html**:  also shows the same information but in Table formats with different colors. So it is very easy to understand. And in Online, you will find many programs on emailing this emailable-report.html to our email address. 
+
+![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/TestNG_EmailableReport.png)
 
 **Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.  
 [B1_TestNG_Annotations_DataProvider.java](Selenium_Programs/B1_TestNG_Annotations_DataProvider.java)   
