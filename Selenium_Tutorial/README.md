@@ -906,6 +906,186 @@ This annotation should be called by @Test annotation only.  Can have line code a
 6: Annotations Priority order:  
 @BeofreSuite >> @BeofreTest >> @BeofreClass >> BeforeMethod >> @Test >> @AfterMethod >> @AfterClass >> @AfterTest >> AfterSuite.
 
+
+@BeforeSuite: The annotated method will be run before all tests in this suite have run.
+@AfterSuite: The annotated method will be run after all tests in this suite have run.
+@BeforeTest: The annotated method will be run before any test method belonging to the classes inside the <test> tag is run.
+@AfterTest: The annotated method will be run after all the test methods belonging to the classes inside the <test> tag have run.
+@BeforeGroups: The list of groups that this configuration method will run before. This method is guaranteed to run shortly before the first test method that belongs to any of these groups is invoked.
+@AfterGroups: The list of groups that this configuration method will run after. This method is guaranteed to run shortly after the last test method that belongs to any of these groups is invoked.
+@BeforeClass: The annotated method will be run before the first test method in the current class is invoked.
+@AfterClass: The annotated method will be run after all the test methods in the current class have been run.
+@BeforeMethod: The annotated method will be run before each test method.
+@AfterMethod: The annotated method will be run after each test method.
+
+What do we write into @Before and @After annotations. 
+In general, Try to remember : 
+Before methods we use for : Triggering configuration/property files, TestData Preparation, starting Selenium server, creation of web drivers, browser divers, Setting up browsers. 
+After Methods we use for : Cleaning all un-wanted testate which might be created during test execution, Displaying correct information into logs, collecting data from TestNT logs and generating reports, stopping selenium server, Closing all browsers, closing all connection with DB, Files. 
+
+1: Beforesuite() : we can use this for test data preparation: Ex: setting up Variables which might be reading data from configuration files, listeners  Or setting current date/time on variables. These variables we will use in Automation. 
+2: For Beforeclass():  Stores data preparation: For ex: For each env (QA/Prod/Stage) : setting up stores, YID. 
+3: @BeforeTest() : Starting Selenium Server. 
+4: @BeforeMethod() : Setup Driver,  setup browser divers, Opening browser, setting browser settings like Maximize, or selenium speed on browser. 
+
+1: @AfterMethod: 
+- stopping SeleniumSession And DeleteCookies
+-  provide proper log information at the bottom after testCase exit (name of the case, passed/fail/skipped criteria, time taken)
+-  testcaseExit, stopSeleniumSessionAndDeleteCookies
+Groups ran.
+2: @AfterClass:  cleaning up test data which got created when previous test executed and which might conflict with next test case, so delete it. 
+3: @AfterTest : May be closing driver and browser. And Stopping Selenium server.
+4: @AfterSuite :  Finally generateReport
+		
+@Test: What ever the testcase/method (here we create methods for each test case) you want to run, then attach @Test annotation at the above of test test/method. So TestNG recognizes it - oh I need to run this test case/method.  
+ 
+DataProvider: best example is: AutoSuggestion. I needed some testate for automating some feature, so I entered testate into CSV files. IN DataProvider readCSVFile and returned testata via DataPRovider.     
+
+What is the use of @BeforeTest/@AfterTest when @BeforeClass/@AfterClass is available.  
+Basically, 
+1: <Suite> can have multiple <Test>. 
+2: <Test> can have multiple <Classes>
+3: <Classes> can have multiple <Class>
+4; <Class> can have <Methods>, but in general practice: we don’t write this. But If there is a need, you can include <Method> under <Class> (For ex: excluding particular method. Ex: exclude attribute.)
+
+Lets look into reason: Why <Test> are needed?  
+For ex: You have three Classe. A, B and C. 
+1: Running groups:
+1: You may want to execute few cases from each class and made into group “Smoke” 
+2: Now, you want to run this group only? Here, include this group under <Test> tag and run it. Which is not possible under <Classes> tag. 
+
+2: You want to run this Smoke group in two different Ones OR two browsers? 
+1: You can run “Smoke” group for FF  under first <Test> tag
+2: Run “Smoke” group for Chrome under second <Test> tag. Like below. 
+
+**5: Attributes :**
+https://testng.org/doc/documentation-main.html
+alwaysRun..@Test
+1. alwaysRun: This attribute takes a value as true or false. If we set true, this method will always execute even its depending method fails. It has the following general form. 
+
+2: Description.. @Test : it is describes the information about the test. 
+@Test(description = “This test enters coupon code”)
+
+3;  dataProvider: This attribute is used to provide data to the test method directly in data-driven testing.
+@Test(dataProvider = “getData”)
+
+4. dataProviderClass: This attribute is used to call the DataProvider method from another class.
+@Test(dataProvider = “getData”, dataProviderClass = Hello.class)
+
+5: dependsOnMethod :
+When the second test method wants to be dependent on the first test method, then this could be possible by the use of "dependOnMethods" attribute. If the first test method fails, then the dependent method on the first test method, i.e., the second test method will not run.
+@Test(dependsOnMethods = {“Method1”, “Method2”. . .})
+
+6. dependsOnGroups: This attribute is used to make test methods depend on a particular group. We can also specify a list of groups this method depends on.
+ If the  group fails, then the dependent method will be skipped/not run. 
+@Test(dependsOnGroups = {“GroupA”, “GroupB”, . . .})
+
+7. expectedExceptions: The attribute expectedExceptions is used for exception testing. It specifies the type of exceptions that are expected to be thrown by a test method during execution. If the exception thrown by a test method does not match with the exception list entered by user, the test method will be marked as failed. TestNG also supports multiple expected exceptions for verification while executing a particular test.Inside method code (in the java class)
+throw new SkipException (where you want to skip : remaining part of that test method will not be executed and control will goes directly to next test method execution.)
+@Test(expectedExceptions = {IOException.class, ArithmeticException.class}) 
+
+8: Enabled :
+The 'enabled' attribute contains the boolean value. By default, its value is true. If you want to skip some test method, then you need to explicitly specify 'false' value.
+@Test(enabled = false)
+
+9. invocationCount: This attribute is used to execute a method in the number of times. It acts as a loop. 
+For example:
+    @Test(invocationCount = 5) Hence, this method will execute 5 times.
+
+10: Groups:
+The 'groups' attribute is used to group the different test cases that belong to the same functionality.
+@Test(group = {“GroupA”, “GroupB”, . . .})
+
+11: Priority:
+When no 'priority' attribute is specified then the TestNG will run the test cases in alphabetical order. Priority determines the sequence of the execution of the test cases. The priority can hold the integer values between -5000 and 5000. When the priority is set, the lowest priority test case will run first and the highest priority test case will be executed last. Suppose we have three test cases and their priority values are -5000, 0, 15, then the order of the execution will be 0,15,5000. If priority is not specified, then the default priority will be 0.
+@Test(Priority =1 )
+
+12: preserve-order="false":  
+If you don't mention or enter false value for above attribute: Then testNG executes in alphabetical order. 
+What if this attribute value is True: It preseves the order of executation for test cases. We can use this notation inside inside <Suite> or <Test> anotation, the way testcases are displayed in the .java file, they will be executed in the same order.
+	
+
+13: parallel
+we can use “parallel” attribute in testng.xml to accomplish parallel test execution in TestNG
+The parallel attribute of suite tag can accept four values:
+tests – All the test cases inside <test> tag of testng.xml file will run parallel classes – All the test cases inside a java class will run parallel methods – All the methods with @Test annotation will execute parallel instances – Test cases in same instance will execute parallel but two methods of two different instances will run in different thread.
+
+<suite name="softwaretestingmaterial" parallel=“false” thread-count="2">
+<test name=“store” parallel=“false” >
+<class name=“floating cart” parallel=“true” >
+<@test>(description=“applycoupontest” parallel=“true” >
+
+14: RetryAnalyzer : 
+If it is set to True, the method will run again if it is failed. 
+How many times it runs: that you can do when you override retryAnayzer method. 
+
+15: timeout:
+If one of the test cases is taking a long time due to which other test cases are failing. To overcome such situation, you need to mark the test case as fail to avoid the failure of other test cases. The timeOut is a time period provided to the test case to completely execute its test case.
+1. At suit level: It will be applicable for all tests in the TestNG suite.
+2. At each test method level: It will be applicable for each test method. It will override the time period if you have configured at the suite level.
+
+16: threadPoolSize: 
+The size of the thread pool for this method. The method will be invoked from multiple threads as specified by invocationCount.
+Note: this attribute is ignored if invocationCount is not specified
+
+17: Exclude (Method or groups) : 
+1; We can exclude a groups too
+2: We can also exclude method 
+
+<groups>
+    <run>
+	 <exclude name="TestGroupNameToExclude"/>
+    </run>      
+</groups>
+
+<class name="TestCaseName">
+     <methods>
+       <exclude name="TestMethodNameToExclude"/>
+     </methods>
+  </class>      
+</classes></div>
+
+
+**4: TestNG Groups**
+With TestNG groups, you can group your smoke/regression/functional test cases and run them by their category.
+
+For ex: Let say, you want to run smoke automation, then you want to run only 10 test scripts out of large amount of cases. You can mark/group those 10 cases as “smoke” and run from TestNG suite.  
+Like this, you can run regression, functional, integration test automation suites. 
+
+Lets take an example and explain.  
+1: Let say you have two java classes, which ten test cases each (under @Test annotation).  
+If you want to mark first test cases from each class file as “smoke”, mark them as smoke.  
+For ex: @Test(groups=”smoke”)  
+2: In yout TestNG Suite, you need to mention the group.  
+Now, insert above two class files into TestNG suite, then write group name as “smoke” in TestNG suite file and run the suite. It will only run those two cases which marked as “smoke” and return the results
+
+**1: Groups** Attributes : Which are used inside annotations, inside code, inside TestNG.xml file
+
+**2: MetaGroups :**
+Groups can also include other groups. These groups are called "MetaGroups".  For example, you might want to define a group "all" that includes "checkintest" and "functest".  "functest" itself will contain the groups "windows" and "linux" while "checkintest will only contain "windows".  Here is how you would define this in your property file:
+<test name="Regression1">
+  <groups>
+    <define name="functest">
+      <include name="windows"/>
+      <include name="linux"/>
+    </define>
+  
+    <define name="all">
+      <include name="functest"/>
+      <include name="checkintest"/>
+    </define>
+  
+    <run>
+      <include name="all"/>
+    </run>
+  </groups>
+  
+  <classes>
+    <class name="test.sample.Test1"/>
+  </classes>
+</test>
+
+
 **3: TestNG Assertions**  
 1: Assertions are TestNG Methods. Assert verifies  
 -	compare values of two arrays/variables.   
@@ -924,6 +1104,22 @@ This annotation should be called by @Test annotation only.  Can have line code a
 - Assert.assertFalse()  
 - Assert.assertSame  
 - Assert.assertNull()
+
+**1: Types of Assertions: :**  
+1: SoftAssert
+2: HarAssert
+
+**1: Types of Assertions: :**  
+SoftAssertion: SoftAsssert is a class. Where we can create object with help of this class. we can execute below methods on this Object.
+
+Difference between HardAssert VS SoftAssert: 
+1:  Test execution will fail if exception is retuned by hardassert but in SoftAssert it catches exceptin but throws at the end of the script with a command (softassert.runall()) so test exection doesn't break as execption not returned in the middle of the script. 
+2: Both returns exception.
+3: Reporting: Both report test case is failed if execption is retunred
+4: Both executes beloe assert methods. 
+Ex; 
+SoftAssert SA = new SoftAssert();
+sa.assertTrue(3>1); 
 
 **1: Assert.assertEquals()**  
 1: it takes total two mandatory parameters and compare their value. If both values are same then only it returns pass, o.w, it returns error/exception.  
@@ -987,18 +1183,14 @@ Assert.assertSame(“Message is an optional parameter”, expected variable, act
 OR  
 Assert.assertSame(expected, actual);
 
-**4: TestNG Groups**
-With TestNG groups, you can group your smoke/regression/functional test cases and run them by their category.
 
-For ex: Let say, you want to run smoke automation, then you want to run only 10 test scripts out of large amount of cases. You can mark/group those 10 cases as “smoke” and run from TestNG suite.  
-Like this, you can run regression, functional, integration test automation suites. 
 
-Lets take an example and explain.  
-1: Let say you have two java classes, which ten test cases each (under @Test annotation).  
-If you want to mark first test cases from each class file as “smoke”, mark them as smoke.  
-For ex: @Test(groups=”smoke”)  
-2: In yout TestNG Suite, you need to mention the group.  
-Now, insert above two class files into TestNG suite, then write group name as “smoke” in TestNG suite file and run the suite. It will only run those two cases which marked as “smoke” and return the results
+**6: TestNG Listers :**   
+What are TestNG Listeners? What type of information you want to put into your report?
+ For example: When test failed an exception is returned, and now we want to display/print this exceptin into the report. Then how can we do this?  BY using listens we can do this. By name it self, they are listening to events which are executing in the test case. For ex: : test failed and execution returned, test fail, test pass, for logging test case exited, OR test case started executing. All such events they can print into our TestReports. 
+
+Definition: 
+The first thing that comes to mind by reading the term “listeners” is that it must be listening to something in the code and being a “good listener,” it does. TestNG listeners are the piece of code that listens to the events occurring in the TestNG. If the event matches the event for which we want the listener to listen, it executes the code, which ultimately results in modifying the default behavior of TestNG. For example, we want to print the exception error onto the reports only if the test fails. Here, we can apply a TestNG listener that will listen to the event of “failing of test case” and when it does, it will log the error.
 
 **5: TestNG Reports**  
 TestNG generates the results in many forms. But most used ones are:   
