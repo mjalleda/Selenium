@@ -1100,13 +1100,17 @@ Groups can also include other groups. These groups are called "MetaGroups".  F
 SoftAssertion: SoftAsssert is a class. Where we can create object with help of this class. we can execute below methods on this Object.
 
 Difference between HardAssert VS SoftAssert: 
-1:  Test execution will fail if exception is retuned by hardassert but in SoftAssert it catches exceptin but throws at the end of the script with a command (softassert.runall()) so test exection doesn't break as execption not returned in the middle of the script. 
+1:  Test execution will fail if exception is retuned by hardassert but in SoftAssert it catches exceptin but throws at the end of the script with a command (softAssertion.assertAll();()) so test exection doesn't break as execption not returned in the middle of the script. 
 2: Both returns exception.
 3: Reporting: Both report test case is failed if execption is retunred
 4: Both executes beloe assert methods. 
 Ex; 
 SoftAssert SA = new SoftAssert();
 sa.assertTrue(3>1); 
+....
+.....
+...
+SA.assertAll();
 
 **1: Assert.assertEquals()**  
 1: it takes total two mandatory parameters and compare their value. If both values are same then only it returns pass, o.w, it returns error/exception.  
