@@ -942,16 +942,7 @@ Groups ran.
 @Test: What ever the testcase/method (here we create methods for each test case) you want to run, then attach @Test annotation at the above of test test/method. So TestNG recognizes it - oh I need to run this test case/method.  
  
 @DataProvider: best example is: AutoSuggestion. I needed some testate for automating some feature, so I entered testate into CSV files. IN DataProvider readCSVFile and returned testata via DataPRovider.     
-
-@DataProvider(name=“getData”)
-Public Object[][] getData() {
-Object[][] data = new Object[2][2] 
-data[][] = “user1”;
-datta[][] = “password1”;
-data[][] = user2”;
-data[][] = “password”2;
-return data; 
-}
+![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/DataProvider.png)
 
 What is the use of @BeforeTest/@AfterTest when @BeforeClass/@AfterClass is available.  
 Basically, 
