@@ -1092,28 +1092,24 @@ How to do this? You can achieve this by Selenium GRID. In olden days, Selenium G
 Port number is optional. Usually, it starts on port number 4444. [this is called default port number]. But for any reason if it is not starting on 4444, you can pass port number parameter. 
 
 **2: Hub & Node connections**  
-1: First, you  need to start hub.  
-2: Confirm if hub started correctly  
-3: Second, you need to start/register nodes  
-4: Confirm if node started correctly?  
-5: On hub, execute automation and it should run on nodes.
+1: Remember on both machines: Seleniumserver should start and running. Go to their Selenium-server folder where it is stored. 
+1: Start hub on selenium server: In Hub machine : Go to folder where selenium server is stored, start hub. 
+**: Java -jar selenium-server-standalone-3.3.1.jar -role -hub -port 4444 :**
 
-**1: First, you  need to start hub.**
-1.1: Go to command prompt/terminal application, and execute below commands. 
-java -jar <selenium-jar file> -role <hub/node>  <[optional]-port  <portnumber>]
+2: **: Confirm hub started correctly on hubmachine::**   http://localhost:4444/grid/console
 
-**2:  confirm if it started correctly**
-On Hub machine, go to browser and execute URL http://localhost:4444/grid/console, you should see gird console V2.24.2 view configuration, basically it gives configuration for the hub, like host, port cleanUpcycle, timeout sessions, etc.. 
+3: **: Register Node on HUB: :**  
+1: For this, Get above HUB IP address & port number which needs for registering. Ex: Let say it is 192.168.200.200:4444
+2: go to node machine, selenium server should be started and running here as well. Go to selenium server folder 
+Java -jar selenium-server-standalone-3.3.1.jar -role -node -port 5555 http://192.168.200.200:4444/hub/register
 
-**3: Start/register Node(s).**
-3.1: Go to command prompt/terminal application,  and execute below commands.  
-java -jar <selenium-jar file> -role <node>  <[optional]-port  <portnumber>] -hub http://<hub ip address>:<hub portnumber>/grid/register/
-
-**4:  confirm if node started correctly**  
-On Hub machine, go to browser and execute URL http://localhost:<hub prot number>/grid/console   you should see gird console V2.24.2 view configuration and it should the node configuration. Here, you should see two tabs. Browsers & Configuration.  
+4: **: Go to HUB machine again, and Confirm if node is registered correctly? :**  
+Go to Browser and enter below URL and confirm you are able to see node registered correctly and you are able to see its browser and OS. http://localhost:4444/grid/console
+you should see gird console V2.24.2 view configuration and it should the node configuration. Here, you should see two tabs. Browsers & Configuration.  
 4.1: Browsers: Here, you see,How many browsers ( like IE, Firefox, and Chrome) a hub allowed to connect. For ex: A hub can allow to execute five firefox browsers on node machine.
 Don't confuse: It shows both remote control and web driver, Both are same.   
 4.2: configuration: In configuration, you should see, What is node's port number, remoteHost URL, capabilities..etc. 
+
 **5: From Hub, execute automation and it should run an Node:**  
 1; There are only two extra lines you need to add to your automation. Those two lines will be added when you create your WebDriver object.   
 In this scenario, we use RemoteWebDriver() class.   
