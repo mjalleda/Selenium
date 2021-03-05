@@ -858,9 +858,11 @@ Using POI libraries I created below methods in my assignments.
 I covered below TestNG topics.  
 1: [About TestNG. Configuration & Installation](#B1)  
 2: [Annotations](#B2)  
-3: [Assertions](#B3)  
-4: [Test Groups](#B4)  
-5: [Reports (Emailable Report, Console & Errors)](#B5)
+3: [Attributes](#B3)  
+4: [TestNG Groups](#B2)  
+5: [Assertions](#B3)  
+6: [Listners](#B4)  
+7: [Reports (Emailable Report, Console & Errors)](#B5)
 
 **1: About TestNG**  
 1: TestNG: This is a tool, which can be configured in Eclipse. Most of selenium developers use this tool, for   
@@ -958,7 +960,11 @@ For ex: You have three Classe. A, B and C.
 1: You can run “Smoke” group for FF  under first <Test> tag
 2: Run “Smoke” group for Chrome under second <Test> tag. Like below. 
 
-**5: Attributes :**
+![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/TestAnnotations.png)
+
+
+
+**3: Attributes :**
 https://testng.org/doc/documentation-main.html
 alwaysRun..@Test
 1. alwaysRun: This attribute takes a value as true or false. If we set true, this method will always execute even its depending method fails. It has the following general form. 
@@ -1063,30 +1069,10 @@ Now, insert above two class files into TestNG suite, then write group name as �
 
 **2: MetaGroups :**
 Groups can also include other groups. These groups are called "MetaGroups".  For example, you might want to define a group "all" that includes "checkintest" and "functest".  "functest" itself will contain the groups "windows" and "linux" while "checkintest will only contain "windows".  Here is how you would define this in your property file:
-<test name="Regression1">
-  <groups>
-    <define name="functest">
-      <include name="windows"/>
-      <include name="linux"/>
-    </define>
-  
-    <define name="all">
-      <include name="functest"/>
-      <include name="checkintest"/>
-    </define>
-  
-    <run>
-      <include name="all"/>
-    </run>
-  </groups>
-  
-  <classes>
-    <class name="test.sample.Test1"/>
-  </classes>
-</test>
 
+![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/MultiGroups.png)
 
-**3: TestNG Assertions**  
+**5: TestNG Assertions**  
 1: Assertions are TestNG Methods. Assert verifies  
 -	compare values of two arrays/variables.   
 -	verifies a variable is null  
@@ -1184,7 +1170,6 @@ OR
 Assert.assertSame(expected, actual);
 
 
-
 **6: TestNG Listers :**   
 What are TestNG Listeners? What type of information you want to put into your report?
  For example: When test failed an exception is returned, and now we want to display/print this exceptin into the report. Then how can we do this?  BY using listens we can do this. By name it self, they are listening to events which are executing in the test case. For ex: : test failed and execution returned, test fail, test pass, for logging test case exited, OR test case started executing. All such events they can print into our TestReports. 
@@ -1192,7 +1177,7 @@ What are TestNG Listeners? What type of information you want to put into your re
 Definition: 
 The first thing that comes to mind by reading the term “listeners” is that it must be listening to something in the code and being a “good listener,” it does. TestNG listeners are the piece of code that listens to the events occurring in the TestNG. If the event matches the event for which we want the listener to listen, it executes the code, which ultimately results in modifying the default behavior of TestNG. For example, we want to print the exception error onto the reports only if the test fails. Here, we can apply a TestNG listener that will listen to the event of “failing of test case” and when it does, it will log the error.
 
-**5: TestNG Reports**  
+**7: TestNG Reports**  
 TestNG generates the results in many forms. But most used ones are:   
 1: Console  
 2: Emailable Report
