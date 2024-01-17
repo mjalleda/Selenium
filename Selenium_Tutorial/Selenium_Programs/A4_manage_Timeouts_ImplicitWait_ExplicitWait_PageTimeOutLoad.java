@@ -64,6 +64,21 @@ public class A4_manage_Timeouts_ImplicitWait_ExplicitWait_PageTimeOutLoad {
 		//5: 5.3: InvisibilityOfElementLocated & 5.4: frameToBeAvailableAndSwitchToIt()
 		//WaitObject.until(ExpectedConditions.invisibilityOfElementLocated(By.));
 		//WaitObject.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.))
+
+		//Declare and initialise a fluent wait
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(obj1)
+			.withTimeout(10000, TimeUnit.MILLISECONDS) //Specify the timout of the wait
+			.pollingEvery(500, TimeUnit.MILLISECONDS) 	//Sepcify polling time
+			.ignoring(NoSuchElementException.class); //Specify what exceptions to ignore
+		
+		//This is how we specify the condition to wait on. //This is what we will explore more in this chapter
+		WebElement clickseleniumlink = wait.until(new Function<WebDriver, WebElement>(){
+		public WebElement apply(WebDriver obj1 ) {
+			return driver.findElement(By.xpath("xpathID"));
+		}
+	});
+
+		
 		
 Obj1.close();
 }
