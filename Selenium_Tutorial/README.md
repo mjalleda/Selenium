@@ -494,7 +494,7 @@ WebDriver Obj1 = new SafariDriver();
 1: Thread.sleep()
 2: Implicit Wait: 
 3: Expicit way : WebdriverWait & FluentWait
-4: PageTimeOutLoad
+4: PageTimeOutLoad();
 
 **1: Thread.sleep(10000);**  
 This is java code.  
