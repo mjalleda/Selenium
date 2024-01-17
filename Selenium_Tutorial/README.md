@@ -816,16 +816,15 @@ Try/catch block: In try block, we write the code & if any errors/exceptions are 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **17: Exceptions**  
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
-![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/ExceptionHirarchy.png)
-1: WebDriverException : A generic exception that serves as a base for all WebDriver-related exceptions.
-2: StaleElementReferenceException : Happens when a reference to an element is no longer valid.
-3: TimeoutException : Raised when an operation times out.
-4: UnexpectedAlertPresentException: Raised when an unexpected alert is present
-
-5: NoSuchElementException: WebDriver is unable to identify the elements during run time, i.e. FindBy method can’t find the element
-6: NoSuchWindowException: WebDriver is switching to an invalid window, which is not available.
-7: NoSuchFrameException: WebDriver is switching to an invalid frame, which is not available.
-8: NoAlertPresentException: WebDriver is switching to an invalid alert, which is not available.
+![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/ExceptionHirarchy.png)  
+1: WebDriverException : A generic exception that serves as a base for all WebDriver-related exceptions.  
+2: StaleElementReferenceException : Happens when a reference to an element is no longer valid.  
+3: TimeoutException : Raised when an operation times out.  
+4: UnexpectedAlertPresentException: Raised when an unexpected alert is present  
+5: NoSuchElementException: WebDriver is unable to identify the elements during run time, i.e. FindBy method can’t find the element.  
+6: NoSuchWindowException: WebDriver is switching to an invalid window, which is not available.  
+7: NoSuchFrameException: WebDriver is switching to an invalid frame, which is not available.  
+8: NoAlertPresentException: WebDriver is switching to an invalid alert, which is not available.  
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **15: EXCEL APPLICATION**  
