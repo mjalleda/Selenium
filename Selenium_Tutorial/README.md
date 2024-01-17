@@ -38,11 +38,19 @@ Selenium Tutorial Index
 13: Verifications/Selenium Methods/funcitons.    
 14: Robot Class.
 15: Java Script Executor  
-16: TRY/Catch block  
-17: Excel   
-18. TestNG  
-19. Selenium GRID  
-20. ANT
+16: TRY/Catch block
+17: Exceptions
+18: Excel   
+19. TestNG  
+20. Selenium GRID  
+21. ANT
+
+Selenium Tutorial Index
+-----------------  
+1: New locators  
+2: Selenium Grid advancements
+3: WWW complaint
+4: 
 
 SELENIUM TUTORIAL
 ------------------------  
@@ -804,6 +812,20 @@ Try/catch block: In try block, we write the code & if any errors/exceptions are 
 
 **Assignments:** Below Assignment should talk more about WebDriver creation and its methods execution.
 [A5_Screenshots_TryCatchBlock.java](Selenium_Programs/A5_Screenshots_TryCatchBlock.java)
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
+**17: Exceptions**  
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
+![alt tag](https://github.com/mjalleda/Selenium/blob/master/Selenium_Tutorial/Screenshots/ExceptionHirarchy.png)
+1: WebDriverException : A generic exception that serves as a base for all WebDriver-related exceptions.
+2: StaleElementReferenceException : Happens when a reference to an element is no longer valid.
+3: TimeoutException : Raised when an operation times out.
+4: UnexpectedAlertPresentException: Raised when an unexpected alert is present
+
+5: NoSuchElementException: WebDriver is unable to identify the elements during run time, i.e. FindBy method can’t find the element
+6: NoSuchWindowException: WebDriver is switching to an invalid window, which is not available.
+7: NoSuchFrameException: WebDriver is switching to an invalid frame, which is not available.
+8: NoAlertPresentException: WebDriver is switching to an invalid alert, which is not available.
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
 **15: EXCEL APPLICATION**  
