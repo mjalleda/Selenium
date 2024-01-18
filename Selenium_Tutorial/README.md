@@ -724,7 +724,7 @@ For ex:
 1: To retrieve all links on a page. Which will be possible by htmlelement “a”  
 2: To retrieve all images on a page. Which will be possible by attribute “img”  
 3: To retrieve all tables on a page. Which will be possible by htmlelement “table”  
-4: To retrieve all links on a page. Which will be possible by htmlelement “frame”  
+4: To retrieve all links on a page. Which will be possible by htmlelement “li”  
 5: To retrieve all buttons on a page. Which will be possible by htmlelement “button”  
 6: To retrieve all input/text boxes on a page. Which will be possible by htmlelement “input”
 
