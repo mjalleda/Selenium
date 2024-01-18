@@ -1304,7 +1304,7 @@ Port number is optional. Usually, it starts on port number 4444. [this is called
 3: **: Register Node on HUB: :**  
 1: For this, Get above HUB IP address & port number which needs for registering. Ex: Let say it is 192.168.200.200:4444
 2: go to node machine, selenium server should be started and running here as well. Go to selenium server folder 
-Java -jar selenium-server-standalone-3.3.1.jar -role -node -port 5555 http://192.168.200.200:4444/hub/register
+Java -jar selenium-server-standalone-3.3.1.jar -role -node -port 5555 http://192.168.200.200:4444/grid/register
 
 4: **: Go to HUB machine again, and Confirm if node is registered correctly? :**  
 Go to Browser and enter below URL and confirm you are able to see node registered correctly and you are able to see its browser and OS. http://localhost:4444/grid/console
