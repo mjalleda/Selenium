@@ -1328,6 +1328,7 @@ DesiredCapabilities capabil = new DesiredCapabilities();
 capabil.setCapability(CapabilityType.BROWSER_NAME, "iOS");
 capabil.setCapability(CapabilityType.PLATFORM, "Mac");
 capabil.setCapability(CapabilityType.VERSION, "10.0");
+capabil.setCapability(CapabilityType.DEVICETYPE, "iPhone");
 capabil.setCapability("applic", applic.getAbsolutePath());
 capabil.setCapability("applic", "iphone");
 descap = DesiredCapabilities.iphone();
