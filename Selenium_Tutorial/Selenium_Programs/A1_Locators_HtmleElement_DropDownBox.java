@@ -29,6 +29,10 @@ public class A1_Locators_HtmleElement_DropDownBox {
 		WebElement Var1 = Obj1.findElement(By.id("year"));
 		Select Var2 = new Select(Var1);
 		Var2.selectByVisibleText("2013");
+		// Select options by index, value, and visible text
+        	Var2.selectByIndex(1);
+       	 	Var2.selectByValue("value1");
+        	Var2.selectByVisibleText("Option 1");
 		System.out.println("3: Used SelectByVisibleText method and selected options from dropdown box");
 		System.out.println("******* The value of Var1 is: "+Var1 + " ***********");
 		System.out.println("The value of Var2 is: "+Var2 + " ***********");
